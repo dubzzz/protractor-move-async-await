@@ -1,0 +1,23 @@
+{
+  "name": "protractor-move-async-await",
+  "version": "0.0.1",
+  "description": "protractor-move-async-await",
+  "author": "Nicolas Dubien <github@dubien.org>",
+  "license": "MIT",
+  "dependencies": {
+    "express": "4.16.2"
+  },
+  "devDependencies": {
+    "protractor": "5.1.0",
+    "webdriver-manager": "12.0.6"
+  },
+  "scripts": {
+    "test": "npm run test:async && npm run test:promise-manager",
+    "test:async": "protractor test/async/conf.js",
+    "test:promise-manager": "protractor test/promise-manager/conf.js",
+    "webdriver:update": "webdriver-manager update",
+    "webdriver:start": "webdriver-manager start",
+    "webdriver:stop": "webdriver-manager shutdown",
+    "start": "node ./src/bin/www"
+  }
+}
