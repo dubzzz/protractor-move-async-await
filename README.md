@@ -20,3 +20,17 @@ npm run webdriver:start
 npm run test:async
 npm run test:promise-manager
 ```
+
+Running those tests locally I get the following errors:
+
+```
+1) [async] angularjs homepage todo list should add a todo
+  Message:
+    Failed: java.net.ConnectException: Connection refused: connect
+...
+
+2) [async #2] angularjs homepage todo list should add a todo
+  Message:
+    Failed: java.net.ConnectException: Connection refused: connect
+...
+```
