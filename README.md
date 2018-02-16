@@ -64,3 +64,38 @@ Finished in 3.163 seconds
     Failed: java.net.ConnectException: Connection refused: connect
 ...
 ```
+
+And also:
+
+```
+1) [async] angularjs homepage todo list should add a todo
+  Message:
+    Failed: java.net.ConnectException: Connection refused: connect
+  Stack:
+    WebDriverError: java.net.ConnectException: Connection refused: connect
+        at Object.checkLegacyResponse (C:\protractor-move-async-await\node_modules\selenium-webdriver\lib\error.js:505:15)
+        at parseHttpResponse (C:\protractor-move-async-await\node_modules\selenium-webdriver\lib\http.js:509:13)
+        at doSend.then.response (C:\protractor-move-async-await\node_modules\selenium-webdriver\lib\http.js:440:13)
+        at <anonymous>
+        at process._tickCallback (internal/process/next_tick.js:188:7)Error
+        at ElementArrayFinder.applyAction_ (C:\protractor-move-async-await\node_modules\protractor\lib\element.ts:482:23)
+        at ElementArrayFinder.(anonymous function).args [as getText] (C:\protractor-move-async-await\node_modules\protractor\lib\element.ts:96:21)
+        at ElementFinder.(anonymous function).args [as getText] (C:\protractor-move-async-await\node_modules\protractor\lib\element.ts:873:14)
+        at element.all.filter.todo (C:\protractor-move-async-await\test\async\todo-spec.js:7:28)
+        at parentWebElements.map (C:\protractor-move-async-await\node_modules\protractor\lib\element.ts:241:18)
+        at Array.map (<anonymous>)
+        at getWebElements.then (C:\protractor-move-async-await\node_modules\protractor\lib\element.ts:237:38)
+        at <anonymous>
+        at process._tickCallback (internal/process/next_tick.js:188:7)
+    From asynchronous test:
+    Error
+        at Suite.<anonymous> (C:\protractor-move-async-await\test\async\todo-spec.js:2:3)
+        at Object.<anonymous> (C:\protractor-move-async-await\test\async\todo-spec.js:1:63)
+        at Module._compile (module.js:624:30)
+        at Object.Module._extensions..js (module.js:635:10)
+        at Module.load (module.js:545:32)
+        at tryModuleLoad (module.js:508:12)
+
+1 spec, 1 failure
+Finished in 3.32 seconds
+```
