@@ -14,7 +14,7 @@ describe('[async] angularjs homepage todo list', function() {
     await element(by.model('todoList.todoText')).sendKeys('write first protractor test');
     await element(by.css('[value="add"]')).click();
     await element.all(by.repeater('todo in todoList.todos'))
-      .filter(MakeSequential(function(todo) {return todo.getText().then(label =>{console.log(label); return label.indexOf('#10') !== -1})}))
-      .each(MakeSequential(async function(todo,indx){ console.log(indx); await todo.element(by.css('input')).click()}));
+      .filter(MakeSequential(todo=>todo.getText().then(label=>label.indexOf('#10') !== -1)))
+      .each(MakeSequential(todo=>todo.element(by.css('input')).click()));
   });
 });
